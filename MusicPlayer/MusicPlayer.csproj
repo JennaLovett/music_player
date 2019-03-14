@@ -48,6 +48,7 @@
   <ItemGroup>
     <Compile Include="Command\Command.cs" />
     <Compile Include="Command\PlayCommand.cs" />
+    <Compile Include="Command\Song.cs" />
     <Compile Include="Form1.cs">
       <SubType>Form</SubType>
     </Compile>

@@ -8,16 +8,18 @@ namespace MusicPlayer.Command
 {
     class PlayCommand : Command
     {
-        string song;
+        Song song;
+        string songName;
 
-        public PlayCommand(string current) 
+        public PlayCommand(Song song) 
         {
-            song = current;
+            this.song = song;
         }
 
         public void execute()
         {
-            Console.WriteLine("Playing " + song);
+            songName = song.play();     //call's the song play() method, which returns the name of the song
+            Console.WriteLine(songName);
         }
     }
 }
