@@ -37,10 +37,12 @@
             this.repeatBtn = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.label2 = new System.Windows.Forms.Label();
-            this.label3 = new System.Windows.Forms.Label();
-            this.label4 = new System.Windows.Forms.Label();
+            this.songLabel = new System.Windows.Forms.Label();
+            this.artistLabel = new System.Windows.Forms.Label();
+            this.albumLabel = new System.Windows.Forms.Label();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
+            this.importBtn = new System.Windows.Forms.Button();
+            this.filePath = new System.Windows.Forms.TextBox();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             this.SuspendLayout();
@@ -65,6 +67,7 @@
             this.pauseBtn.TabIndex = 1;
             this.pauseBtn.Text = "Pause";
             this.pauseBtn.UseVisualStyleBackColor = true;
+            this.pauseBtn.Click += new System.EventHandler(this.pauseBtn_Click);
             // 
             // prevBtn
             // 
@@ -129,38 +132,38 @@
             this.pictureBox1.TabIndex = 7;
             this.pictureBox1.TabStop = false;
             // 
-            // label2
+            // songLabel
             // 
-            this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(387, 436);
-            this.label2.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(251, 29);
-            this.label2.TabIndex = 8;
-            this.label2.Text = "Dark Side of the Moon";
+            this.songLabel.AutoSize = true;
+            this.songLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.songLabel.Location = new System.Drawing.Point(446, 436);
+            this.songLabel.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.songLabel.Name = "songLabel";
+            this.songLabel.Size = new System.Drawing.Size(141, 29);
+            this.songLabel.TabIndex = 8;
+            this.songLabel.Text = "Song Name";
             // 
-            // label3
+            // artistLabel
             // 
-            this.label3.AutoSize = true;
-            this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.Location = new System.Drawing.Point(459, 465);
-            this.label3.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(113, 24);
-            this.label3.TabIndex = 9;
-            this.label3.Text = "Def Leppard";
+            this.artistLabel.AutoSize = true;
+            this.artistLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.artistLabel.Location = new System.Drawing.Point(459, 465);
+            this.artistLabel.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.artistLabel.Name = "artistLabel";
+            this.artistLabel.Size = new System.Drawing.Size(106, 24);
+            this.artistLabel.TabIndex = 9;
+            this.artistLabel.Text = "Artist Name";
             // 
-            // label4
+            // albumLabel
             // 
-            this.label4.AutoSize = true;
-            this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.Location = new System.Drawing.Point(427, 487);
-            this.label4.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(176, 20);
-            this.label4.TabIndex = 10;
-            this.label4.Text = "Dark Side of the Moon";
+            this.albumLabel.AutoSize = true;
+            this.albumLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.albumLabel.Location = new System.Drawing.Point(459, 489);
+            this.albumLabel.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.albumLabel.Name = "albumLabel";
+            this.albumLabel.Size = new System.Drawing.Size(105, 20);
+            this.albumLabel.TabIndex = 10;
+            this.albumLabel.Text = "Album Name";
             // 
             // pictureBox2
             // 
@@ -174,15 +177,34 @@
             this.pictureBox2.TabStop = false;
             this.pictureBox2.Click += new System.EventHandler(this.pictureBox2_Click);
             // 
+            // importBtn
+            // 
+            this.importBtn.Location = new System.Drawing.Point(764, 159);
+            this.importBtn.Name = "importBtn";
+            this.importBtn.Size = new System.Drawing.Size(96, 40);
+            this.importBtn.TabIndex = 12;
+            this.importBtn.Text = "Import Song";
+            this.importBtn.UseVisualStyleBackColor = true;
+            this.importBtn.Click += new System.EventHandler(this.importBtn_Click);
+            // 
+            // filePath
+            // 
+            this.filePath.Location = new System.Drawing.Point(764, 219);
+            this.filePath.Name = "filePath";
+            this.filePath.Size = new System.Drawing.Size(225, 22);
+            this.filePath.TabIndex = 13;
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1092, 603);
+            this.Controls.Add(this.filePath);
+            this.Controls.Add(this.importBtn);
             this.Controls.Add(this.pictureBox2);
-            this.Controls.Add(this.label4);
-            this.Controls.Add(this.label3);
-            this.Controls.Add(this.label2);
+            this.Controls.Add(this.albumLabel);
+            this.Controls.Add(this.artistLabel);
+            this.Controls.Add(this.songLabel);
             this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.repeatBtn);
@@ -212,10 +234,12 @@
         private System.Windows.Forms.Button repeatBtn;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.PictureBox pictureBox1;
-        private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.Label label4;
+        private System.Windows.Forms.Label songLabel;
+        private System.Windows.Forms.Label artistLabel;
+        private System.Windows.Forms.Label albumLabel;
         private System.Windows.Forms.PictureBox pictureBox2;
+        private System.Windows.Forms.Button importBtn;
+        private System.Windows.Forms.TextBox filePath;
     }
 }
 

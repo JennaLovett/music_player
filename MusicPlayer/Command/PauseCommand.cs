@@ -6,18 +6,18 @@ using System.Threading.Tasks;
 
 namespace MusicPlayer.Command
 {
-    class PlayCommand : Command
+    class PauseCommand
     {
         Song song;
 
-        public PlayCommand(Song song) 
+        public PauseCommand(Song song)
         {
             this.song = song;
         }
 
         public void execute()
         {
-            song.play();     //call's the song play() method
+            song.pause();     //call's the song play() method
         }
     }
 }

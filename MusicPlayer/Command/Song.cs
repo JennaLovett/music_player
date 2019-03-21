@@ -1,23 +1,32 @@
-﻿using System;
+﻿using AxWMPLib;
+using System;
 using System.Collections.Generic;
+using System.ComponentModel;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Windows.Forms;
 
 namespace MusicPlayer.Command
 {
     class Song
     {
-        private string songName;
+        private string filePath;
+        private static AxWindowsMediaPlayer player1;
 
-        public Song(string name)
+        public Song(string file)
         {
-            this.songName = name;
+            this.filePath = file;
         }
 
-        public string play()
+        public void play()
         {
-            return songName;
+            Form1.player.Ctlcontrols.play();
+        }
+
+        public void pause()
+        {
+            Form1.player.Ctlcontrols.pause();
         }
     }
 }

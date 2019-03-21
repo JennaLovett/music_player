@@ -8,3 +8,8 @@ C:\Users\Jenna\Desktop\OODesign\Project\MusicPlayer\MusicPlayer\obj\Debug\MusicP
 C:\Users\Jenna\Desktop\OODesign\Project\MusicPlayer\MusicPlayer\obj\Debug\MusicPlayer.csproj.CoreCompileInputs.cache
 C:\Users\Jenna\Desktop\OODesign\Project\MusicPlayer\MusicPlayer\obj\Debug\MusicPlayer.exe
 C:\Users\Jenna\Desktop\OODesign\Project\MusicPlayer\MusicPlayer\obj\Debug\MusicPlayer.pdb
+C:\Users\Jenna\Desktop\OODesign\Project\MusicPlayer\MusicPlayer\bin\Debug\Interop.WMPLib.dll
+C:\Users\Jenna\Desktop\OODesign\Project\MusicPlayer\MusicPlayer\bin\Debug\AxInterop.WMPLib.dll
+C:\Users\Jenna\Desktop\OODesign\Project\MusicPlayer\MusicPlayer\obj\Debug\Interop.WMPLib.dll
+C:\Users\Jenna\Desktop\OODesign\Project\MusicPlayer\MusicPlayer\obj\Debug\AxInterop.WMPLib.dll
+C:\Users\Jenna\Desktop\OODesign\Project\MusicPlayer\MusicPlayer\obj\Debug\MusicPlayer.csproj.ResolveComReference.cache
