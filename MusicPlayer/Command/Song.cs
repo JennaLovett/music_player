@@ -21,12 +21,18 @@ namespace MusicPlayer.Command
 
         public void play()
         {
+            Form1.player.URL = this.filePath;
             Form1.player.Ctlcontrols.play();
         }
 
         public void pause()
         {
             Form1.player.Ctlcontrols.pause();
+        }
+
+        public string getFilePath ()
+        {
+            return this.filePath;
         }
     }
 }

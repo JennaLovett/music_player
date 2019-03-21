@@ -10,15 +10,19 @@ namespace MusicPlayer
     {
         ArrayList songs;
         int currentSongPointer;
+        int slot;
         public static AxWindowsMediaPlayer player;
+        CommandInvoker cmdControl;
 
         public Form1()
         {
             InitializeComponent();
             songs = new ArrayList();
-            currentSongPointer = 0;
-            player = new AxWindowsMediaPlayer();
+            currentSongPointer = -1;
+            player = new AxWindowsMediaPlayer();        //initializing the player that will play our music
             player.CreateControl();     //allows us to control the player, like setting the URL
+            cmdControl = new CommandInvoker();
+            slot = 0;               //slot to be used when setting commands
         }
 
         private void pictureBox2_Click(object sender, EventArgs e)
@@ -28,13 +32,12 @@ namespace MusicPlayer
 
         private void playBtn_Click(object sender, EventArgs e)
         {
-            PlayCommand pc = new PlayCommand((Song)songs[currentSongPointer]);  //creates a new PlayCommand object and passes current song to it
-            pc.execute();       //calls the PlayCommand execute() function, which calls the Song play() function
+            cmdControl.playbtnPushed(currentSongPointer);
         }
 
         private void prevBtn_Click(object sender, EventArgs e)
         {
-
+            
         }
 
         private void importBtn_Click(object sender, EventArgs e)    //importing song file path
@@ -51,9 +54,12 @@ namespace MusicPlayer
 
         private void pauseBtn_Click(object sender, EventArgs e)
         {
-            //player.Ctlcontrols.pause();
-            PauseCommand pac = new PauseCommand((Song)songs[currentSongPointer]);  //creates a new PlayCommand object and passes current song to it
-            pac.execute();       //calls the PlayCommand execute() function, which calls the Song play() function
+            //implement today
+        }
+
+        private void nextBtn_Click(object sender, EventArgs e)
+        {
+            //implement today
         }
     }
 }

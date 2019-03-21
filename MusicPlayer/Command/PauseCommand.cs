@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace MusicPlayer.Command
 {
-    class PauseCommand
+    class PauseCommand : Command
     {
         Song song;
 
